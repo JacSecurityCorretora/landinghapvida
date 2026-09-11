@@ -1,0 +1,521 @@
+/* ============================================
+   1. RESET — tira os espaços que o navegador
+   coloca sozinho, pra todo mundo começar do zero
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   2. VARIÁVEIS — as cores e medidas num lugar só.
+   Trocar aqui muda o e sitinteiro.
+   ============================================ */
+
+:root {
+    --color-primary: #093eb0;
+    --color-secondary: #e1943c;
+    --color-primary-dark: #b0b4b3;
+    --color-accent: #e1943c;
+    --color-text: #1f2a28;
+    --color-muted: #5b6b67;
+    --color-bg: #f6f8f7;
+    --color-white: #ffffff;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   3. BASE — regras gerais do texto e das imagens
+   ============================================ */
+
+body {
+    font-family: "segoe Ui", system-ui, Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--color-white);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 80%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 72px 0;
+}
+
+h2 {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ============================================
+   5. BOTÃO — um estilo só, reaproveitado no site todo
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+    background: var(--color-primary-dark);
+}
+
+.btn-small {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
+}
+
+.btn--full {
+    width: 100%;
+
+}
+
+/* ============================================
+   6. TOPO
+   ============================================ */
+
+.header{
+    position: sticky;
+    top:0;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(10px);
+    box-shadow:0 2px 12px rgba(0,0,0,.06);
+    z-index:1000;
+}
+
+.header__content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:78px;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:800;
+    color:var(--color-primary);
+}
+
+.menu{
+    display:flex;
+    gap:32px;
+}
+
+.menu a{
+    font-weight:500;
+    color:var(--color-text);
+    transition:.2s;
+}
+
+.menu a:hover{
+    color:var(--color-primary);
+}
+
+.btn-small{
+    padding:12px 22px;
+    font-size:.95rem;
+}
+
+/* ============================================
+   7. HERO / OFERTA
+   ============================================ */
+   
+.hero {
+    background: var(--color-bg);
+}
+
+.hero__content{
+    position: relative;
+    z-index: 2;
+
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+.hero__text {
+    flex: 1;
+}
+
+.hero__img {
+    flex: 1;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #4a3200;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.hero h1{
+    font-size:3.4rem;
+    line-height:1.08;
+    font-weight:800;
+    max-width:620px;
+}
+
+.hero h1 span{
+    color:var(--color-primary);
+}
+
+.hero__subtitle{
+    max-width:520px;
+    font-size:1.1rem;
+    color:var(--color-muted);
+}
+
+.hero__subtitle {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    margin-bottom: 28px;
+}
+
+.hero__notice {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-top: 14px;
+}
+ 
+.hero{
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(135deg,#f8fbff 0%,#eef5ff 100%);
+    padding: 90px 0;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    top:-60px;
+    right:-120px;
+
+    width:700px;
+    height:700px;
+
+    background:url("assets/capa.png") no-repeat center;
+    background-size:contain;
+
+    opacity:.08;
+
+    pointer-events:none;
+    z-index:0;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    bottom:-180px;
+    left:-140px;
+
+    width:450px;
+    height:450px;
+
+    background:url("assets/capa.png") no-repeat center;
+    background-size:contain;
+
+    opacity:.05;
+
+    pointer-events:none;
+}
+
+/* ============================================
+   8. CARDS — benefits e plans usam a mesma grade
+   ============================================ */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card,
+.plan {
+    background: var(--color-white);
+    border: 1px solid #e5eae8;
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.card__icon {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.card h3,
+.plan h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--color-muted);
+}
+
+/* ============================================
+   9. PLANOS
+   ============================================ */
+
+.benefits {
+    background: var(--color-bg);
+}
+
+.plan ul {
+    margin: 18px 0 24px;
+    display: grid;
+    gap: 8px;
+}
+
+.plan ul li {
+    color: var(--color-muted);
+}
+
+.plan__price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.plan__price span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-muted);
+}
+
+.plan--featured {
+    border-color: var(--color-primary);
+    border-width: 2px;
+    transform: scale(1.04);
+}
+
+.plan__tag {
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* ============================================
+   10. CONTATO
+   ============================================ */
+
+.contact {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.contact h2 {
+    text-align: left;
+    color: var(--color-white);
+}
+
+.contact__content {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+.contact__text {
+    flex: 1;
+}
+
+.form {
+    flex: 1;
+    background: var(--color-white);
+    padding: 28px;
+    border-radius: var(--radius);
+    display: grid;
+    gap: 16px
+}
+
+.form label {
+    display: grid;
+    gap: 6px;
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form input,
+.form select {
+    padding: 12px 14px;
+    border: 1px solid #cdd7d4;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form input:focus,
+.form select:focus {
+    outline: 2px solid var(--color-primary);
+    border-color: transparent;
+}
+
+/* ============================================
+   11. RODAPÉ
+   ============================================ */
+.footer {
+    background: var(--color-primary);
+    color: #cfe0da;
+    padding: 32px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer p+p {
+    margin-top: 6px;
+}
+
+/* ============================================
+   12. RESPONSIVO — quando a tela for menor que 860px
+   (celular e tablet em pé)
+   ============================================ */
+
+@media (max-width: 860px) {
+    .menu {
+        display: none;
+    }
+
+    .hero__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .plan--featured {
+        transform: none
+    }
+
+    .contact__content {
+        flex-direction: column;
+    }
+
+    .contact h2 {
+        text-align: center;
+    }
+
+    section {
+        padding: 48px 0;
+    }
+}
+
+/* ===== CARROSEL =====*/
+
+.gallery{
+    padding:70px 0;
+    background:#f6f8f7;
+}
+
+.slider{
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    aspect-ratio: 1 / 1; /* quadrado */
+    background: #fff;
+}
+
+.slides{
+    display: flex;
+    height: 100%;
+    transition: transform .5s ease;
+}
+
+.slides img{
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* mostra a imagem inteira */
+    display: block;
+}
+
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
+    color:#fff;
+    cursor:pointer;
+    z-index:2;
+}
+
+.prev{left:15px;}
+.next{right:15px;}
+
+.dots{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:18px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#ccc;
+    cursor:pointer;
+}
+
+.dot.active{
+    background:#3485e9;
+}

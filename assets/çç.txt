@@ -1,0 +1,4 @@
+  linha 37 index: 
+</div>
+            <img class="imagem-principal" src="./assets/capa.png"
+                alt="Familia protegiada pelo plano de saude" />

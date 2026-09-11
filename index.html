@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='styles.css' type='text/css' />
+    <title>Promoção HapVida</title>
+</head>
+
+<body>
+
+    <!-- ==== TOPO ==== -->
+    <header class="header">
+        <div class="container header_content">
+            <span class="logo"><strong> Saúde Fácil</strong></span>
+            <nav class="menu">
+                <a href="#benefits">Vantagens</a>
+                <a href="#plans">Planos</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <a href="#contact" class="btn btn--small">Quero uma Cotação</a>
+        </div>
+    </header>
+
+    <!-- ==== HERO ==== -->
+    <section class="hero">
+        <div class="container hero_content">
+            <div class="hero_text">
+                <p class="badge">Promoção da Hapvida</p>
+                <h1>Plano de sáude para a família toda, a partir de<span> R$ 199,90</span></h1>
+                <p class="hero_subtitle">Consultas, exames e pronto-socorro sem fila. Contrate em 5 minutos,
+                    sem carência para urgência.
+                </p>
+                <a href="#contact" class="btn">Garantir a promoção</a>
+                <p class="hero_notice">Oferta válida por tempo limitado.</p>
+        </div>
+    </section>
+
+    
+    <!-- ===== VANTAGENS ===== -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2>Por que escolher a HapVida</h2>
+            <div class="cards">
+                <article class="card">
+                    <div class="card_icon">🏥</div>
+                    <h3>Rede credenciada</h3>
+                    <p>Mais de 300 clínicas, laboratórios e hospitais na sua região.</p>
+                </article>
+                <article class="card">
+                    <div class="card_icon">⚡</div>
+                    <h3>Sem carência de urgência</h3>
+                    <p>Deu emergência, você já está coberto desde o primeiro dia.</p>
+                </article>
+                <article class="card">
+                    <div class="card_icon">📱</div>
+                    <h3>Tudo pelo app</h3>
+                    <p>Agende consultas, acompanhe seu plano e tenha suporte sempre que precisar.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+<section class="gallery">
+    <div class="container">
+
+        <h2>Conheça mais benefícios</h2>
+
+        <div class="slider">
+
+            <button class="slider-btn prev">&#10094;</button>
+
+            <div class="slides" id="slides">
+
+                <img src="assets/banner1.jpeg" alt="Banner 1">
+
+                <img src="assets/banner2.png" alt="Banner 2">
+
+                <img src="assets/banner3.png" alt="Banner 3">
+
+            </div>
+
+            <button class="slider-btn next">&#10095;</button>
+
+        </div>
+
+        <div class="dots" id="dots"></div>
+
+    </div>
+</section>
+
+    <!-- ===== PLANOS ===== -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <h2></h2>
+            <div class="cards">
+                <article class="plan">
+                    <h3>Essencial</h3>
+                    <p class="plan_price">R$ 149<span>/mês</span></p>
+                    <ul>
+                        <li>Consultas e exames</li>
+                        <li>Pronto-socorro 24h</li>
+                        <li>Telemedicina</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline">Quero esse</a>
+                </article>
+
+                <article class="plan plan--featured">
+                    <p class="plan_tag">Mais popular</p>
+                    <h3>Família</h3>
+                    <p class="plan_price">R$ 389<span>/mês</span></p>
+                    <ul>
+                        <li>Tudo do Essencial</li>
+                        <li>Até 4 pessoas</li>
+                        <li>Odontológico incluso</li>
+                    </ul>
+                    <a href="#contact" class="btn">Quero esse</a>
+                </article>
+                <article class="plan">
+                    <h3>Premium</h3>
+                    <p class="plan_price">R$ 549<span>/mês</span></p>
+                    <ul>
+                        <li>Tudo do Família</li>
+                        <li>Rede nacional</li>
+                        <li>Quarto individual</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline">Quero esse</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="contact" id="contact">
+        <div class="container contact_content">
+            <div class="contact_text">
+                <h2>Peça sua cotação sem compromisso</h2>
+                <p>Preencha os dados e um consultor te chama no WhatsApp em até 1 hora.</p>
+            </div>
+
+            <form class="form" id="quote-form">
+                <label>
+                    Nome
+                    <input type="text" name="nome" placeholder="Seu nome" required />
+                </label>
+                <label>
+                    WhatsApp
+                    <input type="tel" name="telefone" placeholder="(11) 98765-4321" required />
+                </label>
+                <label>
+                    Plano de interesse
+                    <select name="plan">
+                        <option>Essencial</option>
+                        <option>Família</option>
+                        <option>Premium</option>
+                    </select>
+                </label>
+                <button type="submit" class="btn btn--full">Quero minha cotação</button>
+            </form>
+        </div>
+    </section> 
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>JacSecurity&copy; 2026 — Todos os direitos reservados.</p>
+            <p>Site de estudo, sem valor comercial.</p>
+        </div>
+    </footer>
+
+    <script src='script.js'></script>
+    
+</body>
+
+</html>
