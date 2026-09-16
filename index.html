@@ -103,7 +103,7 @@
                         <li>Pronto-socorro 24h</li>
                         <li>Telemedicina</li>
                     </ul>
-                    <a href="#contact" class="btn btn--outline">Quero esse</a>
+                    <a href="#contact" class="btn" onclick="selecionarPlan('Essencial')"> Quero esse</a>
                 </article>
 
                 <article class="plan plan--featured">
@@ -115,7 +115,7 @@
                         <li>Até 4 pessoas</li>
                         <li>Odontológico incluso</li>
                     </ul>
-                    <a href="#contact" class="btn">Quero esse</a>
+                    <a href="#contact" class="btn" onclick="selecionarPlan('Família')"> Quero esse</a>
                 </article>
                 <article class="plan">
                     <h3>Premium</h3>
@@ -125,7 +125,7 @@
                         <li>Rede nacional</li>
                         <li>Quarto individual</li>
                     </ul>
-                    <a href="#contact" class="btn btn--outline">Quero esse</a>
+                    <a href="#contact" class="btn" onclick="selecionarPlan('Premium')">Quero esse</a>
                 </article>
             </div>
         </div>
@@ -136,7 +136,7 @@
         <div class="container contact_content">
             <div class="contact_text">
                 <h2>Peça sua cotação sem compromisso</h2>
-                <p>Preencha os dados e um consultor te chama no WhatsApp em até 1 hora.</p>
+                <p>Preencha os dados e um consultor te chama no WhatsApp em até 10 minutos.</p>
             </div>
 
             <form class="form" id="quote-form">
@@ -150,10 +150,11 @@
                 </label>
                 <label>
                     Plano de interesse
-                    <select name="plan">
-                        <option>Essencial</option>
-                        <option>Família</option>
-                        <option>Premium</option>
+                    <select id="plan" name="plan">
+                        <label for="plan">Plano de interesse</label>
+                        <option value="Essencial">Essencial</option>
+                        <option value="Família">Família</option>
+                        <option value="Premium">Premium</option>
                     </select>
                 </label>
                 <button type="submit" class="btn btn--full">Quero minha cotação</button>
@@ -164,7 +165,7 @@
     <!-- ===== RODAPÉ ===== -->
     <footer class="footer">
         <div class="container">
-            <p>JacSecurity&copy; 2026 — Todos os direitos reservados.</p>
+            <p>JacSecurity &copy; 2026 — Todos os direitos reservados.</p>
             <p>Site de estudo, sem valor comercial.</p>
         </div>
     </footer>

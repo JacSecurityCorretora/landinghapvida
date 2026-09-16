@@ -14,42 +14,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     });
 });
 
-
-/* ===== FORMULÁRIO ===== */
-
-const form = document.getElementById("quote-form");
-
-if (form) {
-    form.addEventListener("submit", function (evento) {
-        evento.preventDefault();
-
-        const nome = form.elements["nome"].value.trim();
-        const telefone = form.elements["telefone"].value.trim();
-        const plano = form.elements["plan"].value;
-
-        const numeroWhatsApp = "5511940762727";
-
-        const texto = [
-            "Olá! Vim pelo site da Saúde Fácil e gostaria de fazer uma cotação.",
-            "",
-            `Nome: ${nome}`,
-            `WhatsApp: ${telefone}`,
-            `Plano: ${plano}`
-        ].join("\n");
-
-        const linkWhatsApp =
-            "https://wa.me/" +
-            numeroWhatsApp +
-            "?text=" +
-            encodeURIComponent(texto);
-
-        window.open(linkWhatsApp, "_blank");
-
-        form.reset();
-    });
-}
-
-
 /* ===== CARROSEL ===== */
 
 const slides = document.getElementById("slides");
@@ -96,4 +60,47 @@ if(slides){
     },4000);
 
     updateSlider();
+}
+
+
+/* ===== FORMULÁRIO ===== */
+
+const form = document.getElementById("quote-form");
+
+if (form) {
+    form.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const nome = form.elements["nome"].value.trim();
+        const telefone = form.elements["telefone"].value.trim();
+        const plan = form.elements["plan"].value;
+
+        const numeroWhatsApp = "5511940762727";
+
+        const texto = [
+            "Olá! Vim pelo site da Saúde Fácil e gostaria de fazer uma cotação.",
+            "",
+            `Nome: ${nome}`,
+            `WhatsApp: ${telefone}`,
+            `Plano: ${plan}`
+        ].join("\n");
+
+        const linkWhatsApp =
+            "https://wa.me/" +
+            numeroWhatsApp +
+            "?text=" +
+            encodeURIComponent(texto);
+
+        window.open(linkWhatsApp, "_blank");
+
+        form.reset();
+    });
+}
+
+function selecionarPlan(plan) {
+    document.getElementById("plan").value = plan;
+
+    document.getElementById("quote-form").scrollIntoView({
+        behavior: "smooth"
+    });
 }

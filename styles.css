@@ -230,11 +230,11 @@ h2 {
 
     position:absolute;
 
-    top:-60px;
-    right:-120px;
+    top:-90px;
+    right: 0px;
 
-    width:700px;
-    height:700px;
+    width:420px;
+    height:420px;
 
     background:url("assets/capa.png") no-repeat center;
     background-size:contain;
@@ -250,16 +250,16 @@ h2 {
 
     position:absolute;
 
-    bottom:-180px;
-    left:-140px;
+    bottom:-90px;
+    left: 0px;
 
-    width:450px;
-    height:450px;
+    width:420px;
+    height:420px;
 
     background:url("assets/capa.png") no-repeat center;
     background-size:contain;
 
-    opacity:.05;
+    opacity:.08;
 
     pointer-events:none;
 }
