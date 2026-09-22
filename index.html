@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='styles.css' type='text/css' />
     <title>Promoção HapVida</title>
+    <link rel="icon" type="image/png" href="assets/hap.png">
 </head>
 
 <body>
@@ -27,7 +28,6 @@
     <section class="hero">
         <div class="container hero_content">
             <div class="hero_text">
-                <p class="badge">Promoção da Hapvida</p>
                 <h1>Plano de sáude para a família toda, a partir de<span> R$ 199,90</span></h1>
                 <p class="hero_subtitle">Consultas, exames e pronto-socorro sem fila. Contrate em 5 minutos,
                     sem carência para urgência.
@@ -46,7 +46,7 @@
                 <article class="card">
                     <div class="card_icon">🏥</div>
                     <h3>Rede credenciada</h3>
-                    <p>Mais de 300 clínicas, laboratórios e hospitais na sua região.</p>
+                    <p>Mais de 350 clínicas, laboratórios e hospitais na sua região.</p>
                 </article>
                 <article class="card">
                     <div class="card_icon">⚡</div>
@@ -96,36 +96,36 @@
             <h2></h2>
             <div class="cards">
                 <article class="plan">
-                    <h3>Essencial</h3>
+                    <h3>SMART FLEX</h3>
                     <p class="plan_price">R$ 149<span>/mês</span></p>
                     <ul>
                         <li>Consultas e exames</li>
                         <li>Pronto-socorro 24h</li>
                         <li>Telemedicina</li>
                     </ul>
-                    <a href="#contact" class="btn" onclick="selecionarPlan('Essencial')"> Quero esse</a>
+                    <a href="#contact" class="btn btn--outline" onclick="selecionarPlan('SMART FLEX')"> Quero esse</a>
                 </article>
 
                 <article class="plan plan--featured">
                     <p class="plan_tag">Mais popular</p>
-                    <h3>Família</h3>
+                    <h3>SMART UP</h3>
                     <p class="plan_price">R$ 389<span>/mês</span></p>
                     <ul>
                         <li>Tudo do Essencial</li>
                         <li>Até 4 pessoas</li>
                         <li>Odontológico incluso</li>
                     </ul>
-                    <a href="#contact" class="btn" onclick="selecionarPlan('Família')"> Quero esse</a>
+                    <a href="#contact" class="btn" onclick="selecionarPlan('SMART UP')"> Quero esse</a>
                 </article>
                 <article class="plan">
-                    <h3>Premium</h3>
+                    <h3>SMART PRIME</h3>
                     <p class="plan_price">R$ 549<span>/mês</span></p>
                     <ul>
                         <li>Tudo do Família</li>
                         <li>Rede nacional</li>
                         <li>Quarto individual</li>
                     </ul>
-                    <a href="#contact" class="btn" onclick="selecionarPlan('Premium')">Quero esse</a>
+                    <a href="#contact" class="btn btn--outline" onclick="selecionarPlan('SMART PRIME')">Quero esse</a>
                 </article>
             </div>
         </div>
@@ -152,9 +152,9 @@
                     Plano de interesse
                     <select id="plan" name="plan">
                         <label for="plan">Plano de interesse</label>
-                        <option value="Essencial">Essencial</option>
-                        <option value="Família">Família</option>
-                        <option value="Premium">Premium</option>
+                        <option value="SMART FLEX">SMART FLEX</option>
+                        <option value="SMART UP">SMART UP</option>
+                        <option value="SMART PRIME">SMART PRIME</option>
                     </select>
                 </label>
                 <button type="submit" class="btn btn--full">Quero minha cotação</button>
