@@ -124,10 +124,22 @@ h2 {
     height:78px;
 }
 
+.header_content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .logo{
     font-size:1.5rem;
     font-weight:800;
     color:var(--color-primary);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
 }
 
 .menu{
