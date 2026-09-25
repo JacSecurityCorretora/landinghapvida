@@ -149,8 +149,8 @@ h2 {
 
 .menu a{
     font-weight:500;
-    color:var(--color-white);
-    transition:.2s;
+    color:var(--color-primary);
+    transition:.9s;
 }
 
 .menu a:hover{
@@ -466,7 +466,7 @@ h2 {
 .slides{
     display: flex;
     height: 100%;
-    transition: transform .5s ease;
+    transition: transform 1s ease;
 }
 
 .slides img{
